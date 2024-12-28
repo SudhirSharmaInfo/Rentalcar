@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Car</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+
+
+    <header class="navbar">
+        <div class="navbar-res">
+            <div class="logo">
+                <a href="#" class="logo-anc"><img src="images/car logo.png" alt=""></a>
+            </div>
+            <nav class="nav-links">
+                <a href="#home-page">Home</a>
+                <a href="#car-page">Cars</a>
+                <a href="#about-page">About Us</a>
+                <a href="#contact-page">Contact</a>
+            </nav>
+            <div class="actions">
+                <div class="get-the-app">
+                    <i class="fa-solid fa-mobile-screen-button fa-2xl" style="color: #000000;"></i>
+                    <a href="https://play.google.com/store/games?hl=en" style="text-decoration: none; color: black;" target="_blank"><p>Get the App</p></a>
+                </div>
+                <a href="#login" class="login-button" onclick="log()">Login/Sign up</a>
+            </div>
+
+            <nav class="nav-links-mobile" id="nav-links-mobile">
+                <div class="mobile-log-image" onclick="closenav()"><i class="fa-solid fa-xmark"></i></div>
+                <a href="#login" class="mobile-log-btn" onclick="log()" onclick="closenav()"><button>Login/Sign
+                        up</button></a>
+                <a href="#home-page" onclick="closenav()">Home</a>
+                <a href="#car-page" onclick="closenav()">Cars</a>
+                <a href="#about-page" onclick="closenav()">About Us</a>
+                <a href="#contact-page" onclick="closenav()">Contact</a>
+            </nav>
+            <!-- <button class="mobile-menu-icon" aria-label="Toggle menu" onclick="togglenav()"> -->
+            <ul class="ham mobile-menu-icon" onclick="togglenav()" id="mobile-menu-icon">
+                <li class="hamburger" id="hamburger1"></li>
+                <li class="hamburger" id="hamburger2"></li>
+                <li class="hamburger" id="hamburger3"></li>
+            </ul>
+            <!-- </button> -->
+        </div>
+    </header>
+
+
+
+
+    <section class="home-page" id="home-page">
+        <div class="home-page-res">
+            <div class="home-page-line-1">EASY AND FAST</div>
+            <div class="home-page-line-1">WAY TO RENT YOUR</div>
+            <div class="home-page-line-1">EASY AND FAST</div>
+            <div class="home-page-line-2">MAKE YOUR TRIP ENJOYABLE</div>
+            <div class="home-page-line-3">Get the Lowest Rental Car Here</div>
+            <div class="home-book-button"><button>Explore Now</button></div>
+        </div>
+    </section>
+
+    <section class="home-bottom-section">
+
+        <div class="home-bottom-section-res">
+            <div class="home-bottom-container">
+                <div class="home-location">
+                    <h3>Location</h3>
+                    <select name="city" id="city" class="inbox">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+                </div>
+                <div class="home-pick">
+                    <h3>Pick up date</h3>
+                    <input type="datetime-local">
+                </div>
+                <div class="home-pick-1">
+                    <h3>Return date</h3>
+                    <input type="datetime-local">
+                </div>
+                <div class="search-box">
+                    <button type="submit" class="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="inventory-container" id="car-page" style="overflow: hidden;">
+        <div class="inventory-container-res">
+            <h1 class="heading">Latest Inventory</h1>
+            <div class="inventory-item">
+                <div class="layer">
+                    <img src="images/nexon.webp" alt="">
+                    <h3>Tata Nexon</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 150/Hour</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/Dzire.jpg" alt="">
+                    <h3>Swift Dzire</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 150/Hour</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/verna.webp" alt="">
+                    <h3>Verna</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 200/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/innova.jpg" alt="">
+                    <h3>Toyota Innova</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 250/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/thar.jpg" alt="">
+                    <h3>Thar</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 350/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/mahindra bs 6e.avif" alt="">
+                    <h3>Mahindra BS 6E</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 1500/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/forntuner.webp" alt="">
+                    <h3>Toyota Fortuner</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 2000/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+                <div class="layer">
+                    <img src="images/mg.webp" alt="">
+                    <h3>MG Gloster</h3>
+                    <div class="layer-sub">
+                        <p>Prize: 1000/Day</p>
+                        <button>View Details <i class="fa-solid fa-arrow-right " style="color: #000000;"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="inventory-button"><button>Explore more</button></a>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="why-container" style="overflow: hidden;">
+        <div class="why-container-res" data-aos="fade-right">
+            <h1>Why ride with RentalCar</h1>
+            <div class="why-item-container">
+                <div class="why-item">
+                    <div class="why-item-image"><img src="images/Easy_Cancellation.png" alt=""></div>
+                    <h3>Easy Cancellation</h3>
+                    <p>Change of plans made easy with RentalCar. Enjoy the flexibility to cancel your rental car
+                        reservation
+                        with just a few clicks</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item-image"><img src="images/Best_Price.png" alt=""></div>
+                    <h3>Best Price Guarantee</h3>
+                    <p> We guarantee the lowest prices on self-drive car rentals and subscriptions in India!</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item-image"><img src="images/Payment_Options.png" alt=""></div>
+                    <h3>Multiple Payment Options</h3>
+                    <p>Don’t let payment mode come in between you and your dream car! Choose from credit card, debit
+                        card,
+                        net banking, or UPI</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-container" id="about-page" style="overflow: hidden;">
+        <div class="about-container-res" data-aos="fade-left">
+            <h1>What People Say About Us</h1>
+            <p>Our clients send us bunch of smilies with our services and we love them.</p>
+            <div class="about-item-container swiper-wrapper" id="about-item-container">
+                <div class="about-item">
+                    <div class="about-item-image"><img src="images/aftab.png" alt=""></div>
+                    <div class="about-text">Thank you very much for your quality service. We take this privilege to
+                        thank you for the
+                        efforts team made going extra mile for doorstep service. We welcome and really appreciate this
+                        gesture.</div>
+                    <h3>Mr.Aftab Shah</h3>
+                    <p>Banglore, India</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-item-image"><img src="images/pt.png" alt=""></div>
+                    <div class="about-text">Your services are highly professional right from booking the car, to the
+                        prompt delivery at the designated pick up, to the Spick and span clean car, and above all
+                        extending warmth and being open to suggestions.</div>
+                    <h3>Ms.Anushka Rathore</h3>
+                    <p>Kolkata, India</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-item-image"><img src="images/userr.png" alt=""></div>
+                    <div class="about-text">Thank you for providing unlimited kilometers. Our road trip with friends was
+                        so stress free and fun because we knew we did not have to pay anything over the money each of us
+                        pooled in no matter where all we went.</div>
+                    <h3>Mr.Sonu Sharma</h3>
+                    <p>Delhi, India</p>
+                </div>
+
+                <div class="about-item">
+                    <div class="about-item-image"><img src="images/rhy.png" alt=""></div>
+                    <div class="about-text">I loved the service. The cars were clean and the delivery guy was polite.
+                        Thank you for the
+                        surprise gift in your car.</div>
+                    <h3>Ms.Poonam Panday</h3>
+                    <p>Pune, India</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-item-image"><img src="images/userr.png" alt=""></div>
+                    <div class="about-text">Cheapest yet the most wonderful cars. I loved how MyChoize provides Japanese
+                        quality at Indian Prices. Great fun and amazing cars. Thanks</div>
+                    <h3>Mr.Sudhir Sharma</h3>
+                    <p>Pune, India</p>
+                </div>
+
+            </div>
+
+
+            <div class="about-scroll-section">
+                <div class="about-scroll-section-res">
+                    <button class="scroll-btn left-btn" id="scrollLeft"><i class="fa-solid fa-arrow-left"
+                            style="color: #ffffff;"></i></button>
+                    <button class="scroll-btn right-btn" id="scrollRight"><i class="fa-solid fa-arrow-right"
+                            style="color: #ffffff;"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="download-section">
+        <div class="download-section-res">
+            <div class="download-section-left">
+                <h2>Refer your friends and Be a</h2>
+                <h1>partner of RentalCar</h2>
+                    <p>Download the app for exclusive deals and ease of booking</p>
+                    <div class="button-section">
+                        <a href="https://www.apple.com/in/app-store/" class="appstore" style="text-decoration: none; color: black;" target="_blank"><img src="images/appstore.png" alt=""></a>
+                        <a href="https://play.google.com/store/games?hl=en" class="playstore" style="text-decoration: none; color: black;" target="_blank"><img src="images/playstore.png" alt=""></a>
+                    </div>
+            </div>
+            <div class="download-section-right"><img src="images/download banner.png" alt=""></div>
+        </div>
+    </section>
+
+
+    <footer class="footer-section" id="contact-page">
+        <div class="footer-section-res">
+            <div class="footer-section-top">
+                <div class="footer-brand">
+                    <img src="images/car logo footer.png" alt="MyChoize Logo" class="footer-logo">
+                    <p>
+                        RentalCar self drive cars is a self drive brand owned by ORIX, Japan’s second largest self drive
+                        car
+                        rental company
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" aria-label="Facebook" class="social-icons-anc" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icons-anc" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Twitter" class="social-icons-anc" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-section">
+                    <!-- Links Section -->
+                    <div class="footer-links">
+
+                        <h4>About</h4>
+                        <ul class="footer-links-ul">
+                            <li><a href="#">Deals</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+
+
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="footer-links-1">
+
+                        <h4>Helpful Links</h4>
+                        <ul class="footer-links-ul">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Agent Login</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-contact">
+                    <h4>Reach Us</h4>
+                    <p class="footer-contact-con"><i class="fa-solid fa-location-dot"></i>
+                        ORIX Auto Infrastructure Services Limited.<br>
+                        Plot No - 94, Marol Co-operative Industrial Estate, Andheri-Kurla Road,<br>
+                        Andheri(E), Mumbai - 400059
+                    </p>
+                    <a href="mailto:carrentals@orixindia.com" class="footer-contact-mini"><i
+                            class="fa-regular fa-envelope"></i> carrentals@orixindia.com</a>
+                    <a href="tel:+919512341234" class="footer-contact-mini"><i class="fa-solid fa-phone-volume"></i>
+                        +91 95 1234 1234</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>Copyright, RentalCar 2024. All rights reserved.</p>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- LOG IN FORM -->
+
+    <div class="form-section" id="form-container">
+        <div class="form-section-res" id="form-section-res">
+            <button onclick="formclose()" class="form-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="form-left-section">
+                <div class="Login">
+                    <h1>Login</h1>
+                    <div class="login-line1">
+                        <p>Doesn't have an account yet?</p>
+                        <button id="signup" onclick="signupbtn()"><b>Sign Up</b></button>
+                    </div>
+                    <h4>Email Address</h4>
+                    <input type="email" class="login-email" placeholder="you@example.com">
+                    <div class="login-line2">
+                        <h4>Password</h4>
+                        <button id="forget-btn"><b>Forget Password?</b></button>
+                    </div>
+                    <input type="password" class="login-password" placeholder="Enter 6 character or more">
+                    <div class="login-checkbox"><input type="checkbox"> Remember me</div>
+
+                    <button class="loginbtn">LOGIN</button>
+                    <span>or login with</span>
+                    <div class="social-icon-box">
+                        <button class="login-google">Google</button>
+                        <button class="login-Facebook"> Facebook</button>
+                    </div>
+                </div>
+
+                <div class="Signup" id="Signup">
+                    <h1>SignUp</h1>
+                    <div class="signup-line1">
+                        <p>Have an account</p>
+                        <button id="login" onclick="loginbtn()"><b>Log In</b></button>
+                    </div>
+                    <h4>Name</h4>
+                    <input type="text" class="signupinput" placeholder="Enter Name">
+                    <h4>Email Address</h4>
+                    <input type="email" class="signupinput" placeholder="you@example.com">
+                    <h4>Password</h4>
+                    <input type="password" class="signupinput" placeholder="Enter 6 character or more">
+                    <div class="login-checkbox"><input type="checkbox"> Remember me</div>
+                    <button class="loginbtn">SIGNUP</button>
+                    <span>or login with</span>
+                    <div class="social-icon-box">
+                        <button class="login-google">Google</button>
+                        <button class="login-Facebook"> Facebook</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-right-section">
+                <img src="images/form.jpg" alt="error">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="main.js"> </script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
